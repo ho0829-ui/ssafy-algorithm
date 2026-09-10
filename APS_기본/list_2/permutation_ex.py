@@ -35,6 +35,22 @@ def func_perm(idx):
             func_perm(idx + 1)
             used[i] = 0
 
+
+def func_perm(idx):
+    if idx == N: #이건 실행하면 안됨!
+        print(perm)
+        return
+    for i in range(N):
+        # check 안 된,표시 없는것만 써라...
+        perm[idx] = arr[i]
+        func_perm(idx + 1)
+
+
+
+
+
+
+
 used = [0] * N   #
 
 func_perm(0)
