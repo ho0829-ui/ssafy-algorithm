@@ -6,10 +6,10 @@
 def suffle(cards,cnt):
     global max_v
     num = int(''.join(cards))
-    # if (cnt,num) in check:  #이미 수행해본 경우의 수인지 확인
-    #     return
+    if (cnt,num) in check:  #이미 수행해본 경우의 수인지 확인
+        return
 
-    # check.add((cnt,num))    #교환 횟수랑 상태랑 같이 저장
+    check.add((cnt,num))    #교환 횟수랑 상태랑 같이 저장
     if cnt == N:
         # print(cards)
         if num > max_v:
